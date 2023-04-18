@@ -23,7 +23,7 @@ namespace PLC_SLC
         {
             PlcType cpuType = (PlcType)Enum.Parse(typeof(PlcType), com_Type.Text, true);
             // Xoa var neu khong hoat dong
-            var myTag = new Tag<IntPlcMapper, short>()
+            myTag = new Tag<IntPlcMapper, short>()
             {
                 //Name is the full path to tag. 
                 Name = "N101:0",
@@ -35,7 +35,7 @@ namespace PLC_SLC
                 Protocol = Protocol.ab_eip,
                 Timeout = TimeSpan.FromSeconds(5)
             };
-            var myTag_2 = new Tag<IntPlcMapper, short>()
+            myTag_2 = new Tag<IntPlcMapper, short>()
             {
                 Name = "N101:2",
                 Gateway = txt_IP.Text,
@@ -44,7 +44,7 @@ namespace PLC_SLC
                 Protocol = Protocol.ab_eip,
                 Timeout = TimeSpan.FromSeconds(5)
             };
-            var myTag_3 = new Tag<IntPlcMapper, short>()
+            myTag_3 = new Tag<IntPlcMapper, short>()
             {
                 Name = "N7:49",
                 Gateway = txt_IP.Text,
@@ -53,7 +53,7 @@ namespace PLC_SLC
                 Protocol = Protocol.ab_eip,
                 Timeout = TimeSpan.FromSeconds(5)
             };
-            var myTag_4 = new Tag<IntPlcMapper, short>()
+            myTag_4 = new Tag<IntPlcMapper, short>()
             {
                 Name = "N7:50",
                 Gateway = txt_IP.Text,
